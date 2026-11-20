@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<header class="topbar">
+    <!-- Brand -->
+    <div class="brand">
+      <div class="brand-logo">N</div>
+      <div>
+        <h1> NETRA</h1>
+        <p> robot mission control</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#units">Active Units</a>
+      <a href="#incidents">Incidents</a>
+      <a href="#logs">Logs</a>
+    </nav>
+
+    <!-- Right Side Status & Clock -->
+    <div class="header-right">
+      <span class="online-dot"></span>
+      <span>SYSTEM ONLINE</span>
+      <span id="clock">00:00:00</span>
+    </div>
+
+    <!-- Dispatch Button -->
+    <button id="dispatch-open">+Dispatchbutton</button>
+  </header>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('clock').textContent = now.toTimeString().split(' ')[0];
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+
+</body>
+</html>
